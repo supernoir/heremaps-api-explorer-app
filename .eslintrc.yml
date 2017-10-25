@@ -1,0 +1,19 @@
+---
+  root: true
+      extends: standard
+          parserOptions:
+                ecmaVersion: 6
+                    env:
+                          jquery: true
+                                browser: true
+                                      node: true
+                                          globals:                              # Projektspezifische globale JS-Objekte
+                                                jQuery: false                       # Don't allow jQuery global object
+                                                      $: true                             # Instead allow $ as the global
+                                                          rules:
+                                                                no-multiple-empty-lines:
+                                                                        - error
+                                                                                -
+                                                                                        max: 1
+                                                                                                  maxEOF: 1
+
