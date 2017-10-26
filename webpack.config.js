@@ -60,7 +60,7 @@ module.exports = {
   plugins: [
     new ExtractTextPlugin('style.css'),
     new HtmlWebpackPlugin({
-      title: 'U°EQUAL',
+      title: 'Here Maps API Explorer',
       filename: 'index.html',
       template: 'index.html'
     })
