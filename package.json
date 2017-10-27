@@ -5,6 +5,7 @@
     "scripts": {
         "start": "webpack-dev-server --watch",
         "build": "webpack -p",
+        "test": "jest",
         "lint:js": "./node_modules/.bin/eslint ./js/**/*.js",
         "lint:scss": "./node_modules/.bin/stylelint ./styles/**/*.scss"
     },

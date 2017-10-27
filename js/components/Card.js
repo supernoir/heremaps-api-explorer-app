@@ -24,6 +24,7 @@ export default class Card extends React.Component {
   render () {
     return (
       <div className='card'>
+        <p>Hello World</p>
         <div className='card-body'>
           <h4 className='card-title'>{this.props.name}</h4>
           <p className='card-text'>
