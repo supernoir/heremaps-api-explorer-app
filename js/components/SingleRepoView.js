@@ -4,16 +4,15 @@ export default class SingleRepoView extends React.Component {
   render () {
     return (
       <div className='container'>
-        <h1>{this.props.name}</h1>
         <ul>
-          {this.props.languages.map(language => <li>{language}</li>)}
+          <li>Hello</li>
         </ul>
       </div>
     )
   }
 }
 
-SingleRepoView.propTypes = {
+/* SingleRepoView.propTypes = {
   name: React.PropTypes.string,
   languages: React.PropTypes.array
-}
+} */
