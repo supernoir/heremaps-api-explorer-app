@@ -1,6 +1,7 @@
 import React from 'react'
-
 import axios from 'axios'
+import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom'
 
 export default class Card extends React.Component {
   constructor (props) {
@@ -23,17 +24,17 @@ export default class Card extends React.Component {
   }
 
   render () {
-    console.log(this.state.allLanguages)
-    console.log(typeof this.state.allLanguages)
-    // {this.allLanguages.map(lang => <p>{lang}</p>)}
     return (
       <div className='card'>
         <div className='card-body'>
           <h4 className='card-title'>{this.props.name}</h4>
           <p className='card-text'>
-            {this.props.fullname}
+            Full Name: {this.props.fullname}
+            Languages: {this.state.allLanguages.map(lang => <p>{[lang]}</p>)}
           </p>
-          <a href='#' className='btn btn-primary'>Go somewhere</a>
+          <Link to={`/repos/${this.props.name}`} className='btn btn-primary'>
+            {'View Repository'}
+          </Link>
         </div>
       </div>
     )
@@ -41,6 +42,6 @@ export default class Card extends React.Component {
 }
 
 Card.propTypes = {
-  name: React.PropTypes.string,
-  fullname: React.PropTypes.string
+  name: PropTypes.string,
+  fullname: PropTypes.string
 }

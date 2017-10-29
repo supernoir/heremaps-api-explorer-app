@@ -1,7 +1,10 @@
 import React from 'react'
 import axios from 'axios'
 
-export default class List extends React.Component {
+import Card from './Card'
+import Menu from './Menu'
+
+export default class ListOfCards extends React.Component {
   constructor () {
     super()
     this.state = {
@@ -22,9 +25,16 @@ export default class List extends React.Component {
 
   render () {
     return (
-      <ul>
-        {this.state.allRepos.map(repo => <li>{repo.full_name}</li>)}
-      </ul>
+      <div className='container-fluid'>
+        <Menu />
+        All Repositories on Github
+        {this.state.allRepos.map(repo => (
+          <div className='card-group'>
+            <Card name={repo.name} fullname={repo.full_name} />
+          </div>
+        ))}
+
+      </div>
     )
   }
 }
