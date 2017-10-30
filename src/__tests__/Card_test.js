@@ -1,6 +1,6 @@
 import React from 'react'
 import renderer from 'react-test-renderer'
-import Welcome from '../components/Card.js'
+import Card from '../components/Card.js'
 
 describe('Card (Snapshot)', () => {
   it('Card renders hello world', () => {

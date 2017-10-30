@@ -27,7 +27,6 @@ export default class ListOfCards extends React.Component {
     return (
       <div className='container-fluid'>
         <Menu />
-        All Repositories on Github
         {this.state.allRepos.map(repo => (
           <div className='card-group'>
             <Card name={repo.name} fullname={repo.full_name} />

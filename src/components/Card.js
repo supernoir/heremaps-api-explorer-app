@@ -29,10 +29,15 @@ export default class Card extends React.Component {
         <div className='card-body'>
           <h4 className='card-title'>{this.props.name}</h4>
           <p className='card-text'>
-            Full Name: {this.props.fullname}
-            Languages: {this.state.allLanguages.map(lang => <p>{[lang]}</p>)}
+            <a href={`https://api.github.com/repos/${this.props.fullname}`}>
+              Repo on Github
+            </a>
           </p>
-          <Link to={`/repos/${this.props.name}`} className='btn btn-primary'>
+          <Link
+            to={`/repos/${this.props.name}`}
+            params={{ repo: this.props.name }}
+            className='btn btn-primary'
+          >
             {'View Repository'}
           </Link>
         </div>

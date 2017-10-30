@@ -13,7 +13,7 @@ export default class App extends React.Component {
         <div className='container'>
           <Route exact path='/' component={ListOfCards} />
           <Route exact path='/repos' component={ListOfCards} />
-          <Route exact path='/repos/:repo' component={SingleRepoView} />
+          <Route exact path='/:repo' component={SingleRepoView} />
         </div>
       </Router>
     )
